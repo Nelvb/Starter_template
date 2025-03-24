@@ -143,13 +143,10 @@ starter-template/
 
 2. Configuración de variables de entorno:
 
-   - Copia `.env.example` a `.env` para desarrollo local:
+   - Crea los archivos `.env` y `.env.docker` copiando los ejemplos incluidos:
      ```bash
-     cp src/backend/.env.example src/backend/.env
-     ```
-   - Copia `.env.docker.example` a `.env.docker` para Docker:
-     ```bash
-     cp src/backend/.env.docker.example src/backend/.env.docker
+     cp .env.example .env
+     cp .env.docker.example .env.docker
      ```
    - Actualiza los valores en los archivos con tus propias credenciales, especialmente:
      - SECRET_KEY
@@ -203,10 +200,15 @@ docker-compose exec backend flask db upgrade
 
 ### Frontend
 
-1. Instalar dependencias:
+1. Navegar al directorio del frontend:
 
    ```bash
    cd src/frontend
+   ```
+
+1. Instalar dependencias:
+
+   ```bash
    npm install
    ```
 
